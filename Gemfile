@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-
-
+ruby "1.9.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use postgresql as the database for Active Record
@@ -28,7 +27,7 @@ gem 'bootstrap-sass'
 gem 'carrierwave'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'rails_12factor'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
