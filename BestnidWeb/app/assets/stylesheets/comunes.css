@@ -1,0 +1,72 @@
+/*background de todas las vistas*/
+.fondo{
+	background-color: #d1d6db;
+}
+
+/* Mensaje de no hay productos en esta categoria */
+.no_producto{
+	margin-top:300px;
+}
+
+#principal {
+	margin-top: 95px;
+}
+
+/* -------------------------------------- */
+
+/* Barra de navegacion */
+.navbar-brand{
+	margin-top: -8px;
+	margin-right: -10px;
+}
+
+/*Barra de search + boton buscar */
+.form-group{
+	width: 395px;                       /* buscar ".navbar-form .form-control" en bootstrap.min*/
+	margin-left: 310px;
+}
+
+.navbar-right{
+	margin-right: 2px;
+}
+
+/* -------------------------------------- */
+
+/* Row que contiene las categorias y la lista */
+.cat_list_bann{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+/* Menu Categorias */
+.col-md-2{
+	width: 14%;
+	/*background-color: #000000;*/
+	height: 0px;
+}
+
+/* Lista index */
+.lista_index{
+	margin-left: 20px;
+	margin-right: 20px;
+	/*background-color: #000000;*/
+	padding-left: 45px;
+	padding-right: 45px;
+}
+
+/* thumbnails */
+.thumbnail{
+    margin: 12px;
+    width: 230px;
+    height: 260px;
+    overflow: auto;
+}
+
+.thumbnail .caption{
+	padding: 2px;
+	color:#333
+}
+
+.thumb:hover .thumbnail{
+	background-color: #c84949;
+}

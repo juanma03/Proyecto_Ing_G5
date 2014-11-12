@@ -1,0 +1,33 @@
+<body class="fondo">
+  <div class="container">
+    
+    <div class="row col-md-4">
+    </div>
+    
+    <div class="row col-md-4">
+      <div>
+      <h1><%= @prod.nombre %> </h1>
+        <%= image_tag @prod.imagen ,size: '400x300' ,:alt => "Facebook", :title => "Facebook"%>
+      <div class="caption">
+        <p><%= @prod.descripcion %> </p>
+        <p> Creado el: <%= @prod.created_at.strftime("%d %b %y") %> </p>
+
+        <h2>Consultas</h2>
+        <%@prod.consultas.each do |p| %>
+          <p><%= p.pregunta %> </p>
+          <p><%= p.respuesta %> </p>
+        <% end %>
+
+        <h2>Ofertas</h2>
+        <%@prod.ofertas.each do |p| %>
+          <p><%= p.necesidad %> </p>
+        <% end %>
+        <div>
+      </div>
+    </div>
+    
+    <div class="row col-md-4">
+    </div>
+  
+  </div>
+</body>

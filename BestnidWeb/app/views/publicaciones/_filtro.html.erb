@@ -1,0 +1,15 @@
+        
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Filtrar por:
+          <span class="caret"></span>
+          </button>
+
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= filtro_path('AZ')%>">A-Z</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= filtro_path('ZA')%>">Z-A</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= filtro_path('Recientes')%>">Fecha</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= filtro_path('Prox_venc')%>">Proximos Vencimientos</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= filtro_path('Lej_venc')%>">Vencimientos mas lejanos</a></li>
+          </ul>
+        </div>

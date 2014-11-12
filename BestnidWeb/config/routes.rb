@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+ root 'publicaciones#index'
+ 
+ get '/orden=:string' => 'publicaciones#filtro' , as: :filtro
+ get '/publicaciones' => 'publicaciones#index' , as: :inicio
+ get '/categorias=:string' => 'publicaciones#categorias', as: :categoria
+
+ resources :publicaciones
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

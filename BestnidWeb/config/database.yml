@@ -17,6 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: postgres
+  password: lololo
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -24,8 +26,6 @@ default: &default
 development:
   <<: *default
   database: BestnidWeb_development
-  username: postgres
-  password: lololo
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,8 +60,6 @@ development:
 test:
   <<: *default
   database: BestnidWeb_test
-  username: postgres
-  password: lololo
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,5 +83,3 @@ test:
 production:
   <<: *default
   database: BestnidWeb_production
-  username: postgres
-  password: lololo
