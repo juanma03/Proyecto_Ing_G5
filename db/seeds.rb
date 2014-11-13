@@ -20,9 +20,6 @@ Publicacion.create(usuario_id: 2 ,categoria:'Vehiculos',imagen:'https://dl.dropb
 Publicacion.create(usuario_id: 1 ,categoria:'Muebles',imagen:'https://dl.dropboxusercontent.com/u/97561407/marco.jpg',nombre: 'Espejo', descripcion: 'Espejo sin marco. Medidas: 0.8m x 1.2m', vencimiento: 15)
 Publicacion.create(usuario_id: 2 ,categoria:'Otros',imagen:'https://dl.dropboxusercontent.com/u/97561407/kriptonita.jpg',nombre: 'Kriptonita', descripcion: '200 gramos de Kriptonita', vencimiento: 28)
 Publicacion.create(usuario_id: 3 ,categoria:'Comestibles',imagen:'https://dl.dropboxusercontent.com/u/97561407/vinagre.jpg',nombre: 'Aceite y Vinagre', descripcion: '200ml de aceite y 300ml de vinagre. No incluye fascos', vencimiento: 15)
-Publicacion.create(usuario_id: 3 ,categoria:'Comestibles',imagen:'https://dl.dropboxusercontent.com/u/97561407/vinagre.jpg',nombre: 'Aceite y Vinagre', descripcion: '200ml de aceite y 300ml de vinagre. No incluye fascos', vencimiento: 15)
-
-
 
 puts 'Creo las Necesidades'
 Oferta.create(usuario_id: 5, publicacion_id: 2 ,necesidad: 'Siempre me gustaron los animales porque vivo solo y son buena compania. Una llama es justo lo que necesito.' )
