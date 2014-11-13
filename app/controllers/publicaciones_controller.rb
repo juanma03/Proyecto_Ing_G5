@@ -4,9 +4,12 @@ class PublicacionesController < ApplicationController
   def index
   	if params[:search]
       	@p = Publicacion.search(params[:search]).order("created_at desc")
+        if @p.blank?
+          render 'no_resultados'
+        end
     else
     	@p = Publicacion.all
-	end
+    end
   end
   	
   def show
@@ -18,19 +21,21 @@ class PublicacionesController < ApplicationController
   end
 
   def filtro
+    @parametro = params[:string]
 
-  	@parametro = params[:string]
-
-  	if @parametro == 'AZ'
-  		@p = Publicacion.a_z
-  	elsif @parametro == 'Recientes'
-  		@p = Publicacion.recientes
-  			elsif @parametro == 'ZA'
-  				@p = Publicacion.z_a
-  				elsif @parametro == 'Prox_venc'
-  					@p = Publicacion.venc_prox
-  					elsif @parametro == 'Lej_venc'
-  						@p = Publicacion.venc_lejano
-  	end
-end
+    case @parametro
+      when 'AZ'
+        @p = Publicacion.a_z
+      when 'ZA'
+        @p = Publicacion.z_a
+      when 'Recientes'
+        @p = Publicacion.recientes
+      when 'Venc_prox'
+        @p = Publicacion.venc_prox
+      when 'Venc_lej'
+        @p = Publicacion.venc_lejano
+      else
+        redirect_to :back
+    end
+  end
 end
