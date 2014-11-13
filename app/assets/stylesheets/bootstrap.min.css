@@ -5023,7 +5023,8 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{
 
 .thumbnail>img,.thumbnail a>img{
 	margin-right:auto;
-	margin-left:auto
+	margin-left:auto;
+	height: 190px;                      /* modificado, no estaba */
 }
 
 a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{
