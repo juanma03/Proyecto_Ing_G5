@@ -29,5 +29,7 @@ Oferta.create(usuario_id: 7, publicacion_id: 1 ,necesidad: 'Soy carpintero y la 
 Oferta.create(usuario_id: 4, publicacion_id: 1 ,necesidad: 'Soy carnicero y lamentablemente perdi un dedo trabajando. Me gustaria comprar el producto para que no me vuelva a ocurrir' )
 
 puts 'Creo las Consultas'
-Consulta.create(usuario_id: 4, publicacion_id: 1, pregunta: 'Sirven para boxear', respuesta: 'Obvvveeo Pa ' )
-Consulta.create(usuario_id: 3, publicacion_id: 2, pregunta: 'Anda a nassta', respuesta: 'Anda con diesel papa' )
+Consulta.create(usuario_id: 4, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consulta.create(usuario_id: 3, publicacion_id: 2, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consulta.create(usuario_id: 4, publicacion_id: 3, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consulta.create(usuario_id: 3, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )

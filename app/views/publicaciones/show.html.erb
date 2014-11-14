@@ -1,14 +1,154 @@
 <body class="fondo">
   <div class="container">
     
-    <div class="row col-md-4">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel bestnid-primary">
+          <div class="panel-heading">
+            <h3><%= @prod.nombre %> </h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-7">
+              <div class="well">
+                <%= image_tag @prod.imagen, size: '350x300' ,:alt => "Facebook", :title => "Facebook"%>
+              </div>
+            </div>
+            <div class="col-md-5 ">
+              <div class="well well-lg">
+                <%= @prod.descripcion %>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            Fecha de publicación: <%= @prod.created_at.strftime("%d %b %y") %>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="row col-md-4">
-      <div>
-      <h1><%= @prod.nombre %> </h1>
-        <%= image_tag @prod.imagen ,size: '400x300' ,:alt => "Facebook", :title => "Facebook"%>
-      <div class="caption">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <!--span class="glyphicon glyphicon-comment"></span-->
+                <h3 class="panel-title">
+                    Comentarios</h3>
+                <!--span class="label label-info">78</span-->
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <%@prod.consultas.each do |p| %>
+                      <li class="list-group-item">
+                          <div class="row">
+                              <!--div class="col-xs-2 col-md-1">
+                                  <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div-->
+                              <div class="col-xs-10 col-md-12">
+                                  <div class="list-group-item pregunta">
+                                      <p><%= p.pregunta %> </p>
+                                      <div class="mic-info-pregunta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="col-xs-10 col-md-11 col-md-offset-1">
+                                  <div class="list-group-item respuesta">
+                                      <p><%= p.respuesta %> </p>
+                                      <div class="mic-info-respuesta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                  </div>
+                              </div>
+
+                                  <!--div class="comment-text">
+                                      Awesome design
+                                  </div-->
+                                  <!--div class="action">
+                                      <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                          <span class="glyphicon glyphicon-pencil"></span>
+                                      </button>
+                                      <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                          <span class="glyphicon glyphicon-ok"></span>
+                                      </button>
+                                      <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                          <span class="glyphicon glyphicon-trash"></span>
+                                      </button>
+                                  </div-->
+                              <!--/div-->
+                          </div>
+                      </li>
+                    <% end %>
+                </ul>
+                <!--a href="#" class="btn bestnid-btn btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> Ver más</a-->
+            </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <!--span class="glyphicon glyphicon-comment"></span-->
+                <h3 class="panel-title">
+                    Ofertas</h3>
+                <!--span class="label label-info">78</span-->
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <%@prod.ofertas.each do |p| %>
+                      <li class="list-group-item">
+                          <div class="row">
+                              <!--div class="col-xs-2 col-md-1">
+                                  <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div-->
+                              <div class="col-xs-10 col-md-12">
+                                  <div class="list-group-item pregunta">
+                                      <p><%= p.necesidad %> </p>
+                                      <div class="mic-info-pregunta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                  </div>
+                              </div>
+                                  <!--div class="comment-text">
+                                      Awesome design
+                                  </div-->
+                                  <!--div class="action">
+                                      <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                          <span class="glyphicon glyphicon-pencil"></span>
+                                      </button>
+                                      <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                          <span class="glyphicon glyphicon-ok"></span>
+                                      </button>
+                                      <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                          <span class="glyphicon glyphicon-trash"></span>
+                                      </button>
+                                  </div-->
+                              <!--/div-->
+                          </div>
+                      </li>
+                    <% end %>
+                </ul>
+                <!--a href="#" class="btn bestnid-btn btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> Ver más</a-->
+            </div>
+        </div>
+      </div>    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--h1><%= @prod.nombre %> </h1-->
+        <!--%= image_tag @prod.imagen ,size: '400x300' ,:alt => "Facebook", :title => "Facebook"%-->
+      <!--div class="caption">
         <p><%= @prod.descripcion %> </p>
         <p> Creado el: <%= @prod.created_at.strftime("%d %b %y") %> </p>
 
@@ -23,11 +163,7 @@
           <p><%= p.necesidad %> </p>
         <% end %>
         <div>
-      </div>
-    </div>
-    
-    <div class="row col-md-4">
-    </div>
+      </div-->
   
   </div>
 </body>
