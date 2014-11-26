@@ -1,5 +1,5 @@
 class Publicacion < ActiveRecord::Base
-  belongs_to :usuario
+  belongs_to :user
   has_many :consultas
   has_many :ofertas
 
@@ -14,7 +14,7 @@ class Publicacion < ActiveRecord::Base
 
   def self.search(query)
     # where(:title, query) -> This would return an exact match of the query
-    where("lower(nombre) like ?", "%#{query}%".downcase)
+    where("lower(nombre) like ? OR lower(descripcion) like ?", "%#{query}%".downcase, "%#{query}%".downcase)
   end
 
 end

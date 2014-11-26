@@ -5,8 +5,8 @@ class CreatePublicacions < ActiveRecord::Migration
       t.text :descripcion
       t.string :imagen
       t.string :categoria
-      t.integer :vencimiento
-      t.integer :usuario_id
+      t.datetime :vencimiento
+      t.integer :user_id
 
       t.timestamps
     end

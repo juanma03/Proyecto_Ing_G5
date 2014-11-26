@@ -4475,7 +4475,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 
 @media (min-width:768px){
 	.navbar-left{
-		float:left!important
+		float:left!important;
 	}
 
 	.navbar-right{

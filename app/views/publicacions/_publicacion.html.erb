@@ -1,0 +1,12 @@
+<a href="<%= publicacion_path(pub) %>" class="thumb">
+	<div class="col-md-4">
+	  <div class="thumbnail">
+	    <%= image_tag pub.imagen, size: '260x190' ,:alt =>pub.nombre, :title =>pub.nombre %>
+	    <div class="caption">
+	      <h5><b><%= pub.nombre %></b></h5>
+	      <div><h6><%= pub.descripcion.truncate(60,separator: ' ') %></h6></div>
+	      <h6> Vence el: <%= pub.vencimiento.strftime("%d %b %y") %></h6>
+	    </div>
+	  </div>
+	</div>
+</a>

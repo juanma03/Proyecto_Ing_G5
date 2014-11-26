@@ -4,7 +4,7 @@ class CreateOferta < ActiveRecord::Migration
       t.string :necesidad
       t.float :monto
       t.integer :publicacion_id
-      t.integer :usuario_id
+      t.integer :user_id
 
       t.timestamps
     end

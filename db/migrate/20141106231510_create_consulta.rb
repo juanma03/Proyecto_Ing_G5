@@ -4,7 +4,7 @@ class CreateConsulta < ActiveRecord::Migration
       t.string :pregunta
       t.string :respuesta
       t.integer :publicacion_id
-      t.integer :usuario_id
+      t.integer :user_id
 
       t.timestamps
     end

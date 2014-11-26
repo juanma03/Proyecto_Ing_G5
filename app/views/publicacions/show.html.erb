@@ -1,0 +1,132 @@
+<body class="fondo">
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel bestnid-primary">
+          <div class="panel-heading">
+            <h3><%= @prod.nombre %> </h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-7">
+              <div class="well">
+                <%= image_tag @prod.imagen, size: '350x300' ,:alt => @prod.nombre, :title => @prod.nombre %>
+              </div>
+            </div>
+            <div class="col-md-5 ">
+              <div class="well well-lg">
+                <%= @prod.descripcion %>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="row">
+              <div class="col-md-6">
+                Fecha de publicación: <%= @prod.created_at.strftime("%d %b %y") %>
+              </div>
+              <div class="col-md-6" style="text-align: right">
+                Fecha de vencimiento: <%= @prod.vencimiento.strftime("%d %b %y") %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Comentarios</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                  <% if @prod.consultas.blank? %>
+                    <li class="list-group-item">
+                      <p>Aún no hay consultas en esta publicación</p>
+                    </li>
+                  <% else %>
+                    <%@prod.consultas.each do |p| %>
+                      <li class="list-group-item">
+                          <div class="row">
+                              <div class="col-xs-10 col-md-12">
+                                  <div class="list-group-item pregunta">
+                                      <p><%= p.pregunta %> </p>
+                                      <div class="mic-info-pregunta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xs-10 col-md-11 col-md-offset-1">
+                                  <div class="list-group-item respuesta">
+                                      <p><%= p.respuesta %> </p>
+                                      <div class="mic-info-respuesta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                    <%end%>
+                  <% end %>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <% if user_signed_in? %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default widget">
+          <% if current_user.id == @prod.user_id %>
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Ofertas</h3>
+            </div>
+
+            <div class="panel-body">
+                    <ul class="list-group">
+                      <% if @prod.ofertas.blank? %>
+                        <li class="list-group-item">
+                          <p>Aún no hay ofertas en tu publicación</p>
+                        </li>
+                      <% else %>
+                        <%@prod.ofertas.each do |p| %>
+                          <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col-xs-10 col-md-12">
+                                      <div class="list-group-item pregunta">
+                                          <p><%= p.necesidad %> </p>
+                                          <div class="mic-info-pregunta">
+                                            <%= p.created_at.strftime("%d %b %y") %>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                        <% end %>
+                      <%end%>
+                    </ul>
+            </div>
+            <% else %>
+                  <ul class="list-group">
+                    <!--li class="list-group-item"-->
+                      <div class="row">
+                        <div class="col-xs-10 col-md-12">
+                          <div class="list-group-item">
+                            <p> <%= link_to "Agregar un comentario", new_publicacion_oferta_path(@prod) %> | <%= link_to "Volver", publicacions_path %> </p>
+                          </div>
+                        </div>
+                      </div>
+                    <!--/li-->
+                  </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>  
+    <%end%>  
+  </div>
+</body>
