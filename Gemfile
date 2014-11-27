@@ -34,7 +34,7 @@ gem 'carrierwave'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'validates_email_format_of'
-
+gem 'rails_12factor', group: :production
 gem 'date_validator'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
