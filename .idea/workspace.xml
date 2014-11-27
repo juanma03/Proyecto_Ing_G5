@@ -24,7 +24,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/publicaciones/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/publicacions/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.19162641" vertical-offset="0" max-vertical-offset="850">
               <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
@@ -54,7 +54,7 @@
         </entry>
       </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/publicaciones/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/publicacions/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="612">
               <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -64,7 +64,7 @@
         </entry>
       </file>
       <file leaf-file-name="show_categorias.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/publicaciones/show_categorias.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/publicacions/show_categorias.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="799">
               <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
@@ -73,8 +73,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publicaciones_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/publicaciones_controller.rb">
+      <file leaf-file-name="publicacions_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/publicacions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -94,8 +94,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/models/consulta.rb" />
-        <option value="$PROJECT_DIR$/app/models/oferta.rb" />
+        <option value="$PROJECT_DIR$/app/models/consultum.rb" />
+        <option value="$PROJECT_DIR$/app/models/ofertum.rb" />
         <option value="$PROJECT_DIR$/app/models/publicacion.rb" />
         <option value="$PROJECT_DIR$/app/models/usuario.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20141106231430_create_usuarios.rb" />
@@ -105,13 +105,13 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/comunes.css" />
-        <option value="$PROJECT_DIR$/app/views/publicaciones/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/publicacions/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/views/publicaciones/show_categorias.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/publicacions/show_categorias.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/publicaciones_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/publicaciones/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/publicacions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/publicacions/index.html.erb" />
       </list>
     </option>
   </component>
@@ -245,7 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="publicaciones" />
+              <option name="myItemId" value="publicacions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,7 +619,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/consulta.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/consultum.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -667,7 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/publicaciones.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/publicacions.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="668">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -731,7 +731,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/oferta.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/ofertum.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0508982" vertical-offset="0" max-vertical-offset="668">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
@@ -763,7 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/publicaciones_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/publicacions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -771,7 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publicaciones/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/publicacions/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="612">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -779,7 +779,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publicaciones/show_categorias.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/publicacions/show_categorias.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="799">
           <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
@@ -795,7 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/publicaciones/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/publicacions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19162641" vertical-offset="0" max-vertical-offset="850">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />

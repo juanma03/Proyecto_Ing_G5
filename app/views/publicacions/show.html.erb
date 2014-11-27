@@ -33,44 +33,41 @@
       </div>
     </div>
 
-
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default widget">
             <div class="panel-heading">
-                <h3 class="panel-title">
-                    Comentarios</h3>
+              <h3 class="panel-title"> Comentarios</h3>
             </div>
             <div class="panel-body">
                 <ul class="list-group">
-                  <% if @prod.consultas.blank? %>
+                  <% if @prod.consulta.blank? %>
                     <li class="list-group-item">
-                      <p>Aún no hay consultas en esta publicación</p>
+                      <% if current_user.id != @prod.user_id %>
+                        <p>Aún no hay consultas en esta publicación</p>
+                      <%else%>
+                        <p>Aún no hay consultas en tu publicación</p>
+                      <%end%>
                     </li>
                   <% else %>
-                    <%@prod.consultas.each do |p| %>
+                    <%@prod.consulta.each do |c| %>
                       <li class="list-group-item">
                           <div class="row">
-                              <div class="col-xs-10 col-md-12">
-                                  <div class="list-group-item pregunta">
-                                      <p><%= p.pregunta %> </p>
-                                      <div class="mic-info-pregunta">
-                                        <%= p.created_at.strftime("%d %b %y") %>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-xs-10 col-md-11 col-md-offset-1">
-                                  <div class="list-group-item respuesta">
-                                      <p><%= p.respuesta %> </p>
-                                      <div class="mic-info-respuesta">
-                                        <%= p.created_at.strftime("%d %b %y") %>
-                                      </div>
-                                  </div>
-                              </div>
+                            <%= render partial: "consulta/consult_question", locals: {consult: c} %>
+                            <%= render partial: "consulta/consult_answer", locals: {consult: c} %>
                           </div>
                       </li>
                     <%end%>
-                  <% end %>
+                  <%end%>
+                  <% if user_signed_in? %>
+                    <% if current_user.id != @prod.user_id %>
+                      <li class="list-group-item">
+                        <div class="row">
+                          <%= render partial: "consulta/consult_form", locals: {publicacion: @prod} %>  
+                        </div>
+                      </li>
+                    <%end%>
+                  <%end%>
                 </ul>
             </div>
         </div>
@@ -84,25 +81,32 @@
           <% if current_user.id == @prod.user_id %>
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    Ofertas</h3>
+                    Ofertas que te hicieron</h3>
             </div>
 
             <div class="panel-body">
                     <ul class="list-group">
-                      <% if @prod.ofertas.blank? %>
+                      <% if @prod.oferta.blank? %>
                         <li class="list-group-item">
                           <p>Aún no hay ofertas en tu publicación</p>
                         </li>
                       <% else %>
-                        <%@prod.ofertas.each do |p| %>
+                        <%@prod.oferta.each do |p| %>
                           <li class="list-group-item">
-                              <div class="row">
-                                  <div class="col-xs-10 col-md-12">
-                                      <div class="list-group-item pregunta">
-                                          <p><%= p.necesidad %> </p>
-                                          <div class="mic-info-pregunta">
-                                            <%= p.created_at.strftime("%d %b %y") %>
-                                          </div>
+                            <div class="row">
+                              <div class="col-xs-10 col-md-12">
+                                <div class="list-group-item pregunta">
+                                  <p><%= p.necesidad %> </p>
+                                  <div class="row">
+                                    <div class="col-md-10">
+                                      <br>
+                                      <div class="mic-info-pregunta">
+                                        <%= p.created_at.strftime("%d %b %y") %>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <a href="#" class="btn btn-default">Aceptar oferta</a>
+                                    </div>
                                       </div>
                                   </div>
                               </div>
@@ -111,18 +115,58 @@
                       <%end%>
                     </ul>
             </div>
-            <% else %>
+            <% elsif @nooferte %>
+              <div class="panel-heading">
+                <h3 class="panel-title">Haz tu oferta</h3>
+              </div>
+              <div class="panel-body">
                   <ul class="list-group">
                     <!--li class="list-group-item"-->
                       <div class="row">
                         <div class="col-xs-10 col-md-12">
                           <div class="list-group-item">
-                            <p> <%= link_to "Agregar un comentario", new_publicacion_oferta_path(@prod) %> | <%= link_to "Volver", publicacions_path %> </p>
+                              <%= simple_form_for ([@prod, Ofertum.new]),
+                                    html: { class: 'form-inline', style: 'text-align: center'} do |f| %>
+                                <div class="form-inputs">
+                                  <%= f.input :necesidad, required: true, label: false, placeholder: 'Describe tu necesidad en pocas palabras...', :input_html => {:style => 'height: 50px', :maxlength => 140, :size => 132}%>
+                                  <br>
+                                  <%= f.input :monto, required: true, label: 'Ingresa el Monto (AR$) que estas dispuesto a pagar' %>
+                                  <br>
+                                  <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
+                                </div>
+
+                                <div class="form-actions">
+                                  <%= f.button :submit, "Enviar oferta" %>
+                                </div>
+                              <% end %>
                           </div>
                         </div>
                       </div>
                     <!--/li-->
                   </ul>
+              </div>
+            <%else%>
+              <div class="panel-heading">
+                <h3 class="panel-title">¡Ya hiciste tu oferta!</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div class="col-xs-10 col-md-12">
+                        <div class="list-group-item pregunta">
+                          <%@mioferta.each do |o| %>
+                          <p><b>Necesidad: </b><%= o.necesidad %> </p>
+                          <p><b>Monto (AR$): </b><%= o.monto %> </p>
+                          <div class="mic-info-pregunta">
+                            <%end%>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             <% end %>
           </div>
         </div>

@@ -1,12 +1,14 @@
-<div class="col-md-2">
-        <%= render 'menu_categorias' %>
+<body class="fondo">
+  <div class="col-md-2">
+    <%= render 'menu_categorias' %>
+  </div>
+  <div class="col-md-8">
+    <div class="row row-centered">
+      <div class="col-md-12 col-centered">
+        <%@p.all.each do |pub| %>
+          <%= render "publicacion",pub: pub %>
+        <% end %>
       </div>
-      <div class="col-md-8">
-        <div class="row row-centered">
-          <div class="col-md-12 col-centered">
-            <%@p.all.each do |pub| %>
-              <%= render "publicacion",pub: pub %>
-            <% end %>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</body>

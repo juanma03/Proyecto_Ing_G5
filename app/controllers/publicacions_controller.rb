@@ -36,8 +36,12 @@ class PublicacionsController < ApplicationController
   	
   def show
     @prod = Publicacion.find(params[:id])
+    if (current_user.nil? == false)
+      @nooferte = @prod.oferta.where("user_id = ?", current_user.id).blank?
+      @mioferta= @prod.oferta.where("user_id = ?", current_user.id)
+    end
   end
-
+  
   def categorias
     @cat = Publicacion.where("categoria LIKE :categoria", {:categoria => params[:string]})
   end
@@ -73,7 +77,8 @@ class PublicacionsController < ApplicationController
   end
  
 private
-  def publicacion_params
-    params.require(:publicacion).permit(:nombre, :descripcion, :imagen, :categoria, :vencimiento)
-  end
+def publicacion_params
+  params.require(:publicacion).permit(:nombre, :descripcion, :imagen, :categoria, :vencimiento)
+end
+
 end

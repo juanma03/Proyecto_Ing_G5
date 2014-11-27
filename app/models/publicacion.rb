@@ -1,7 +1,7 @@
 class Publicacion < ActiveRecord::Base
   belongs_to :user
-  has_many :consultas
-  has_many :ofertas
+  has_many :consulta
+  has_many :oferta
 
   scope :recientes, -> { order("created_at desc")}
   

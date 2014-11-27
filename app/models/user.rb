@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :publicacions
-  has_many :ofertas
-  has_many :consultas
+  has_many :oferta
+  has_many :consulta
 
   validates_format_of :localidad, :direccion, :with => /\A[a-zA-Z' '0-9]{2,15}\Z/
 

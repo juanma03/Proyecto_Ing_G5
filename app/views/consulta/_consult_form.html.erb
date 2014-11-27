@@ -1,0 +1,17 @@
+<div class="col-xs-10 col-md-12">
+	
+		<%= simple_form_for ([publicacion, Consultum.new]),
+          html: { class: 'form-inline', style: 'text-align: center'} do |f| %>
+			<div class="form-inputs">
+				<%= f.input :pregunta, required: true, label: false, placeholder: 'Haz tu pregunta...', :input_html => {:style => 'height: 50px', :maxlength => 140, :size => 132}%>
+				<%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
+			</div>
+			<br>
+			<div class="form-actions">
+				<%= f.button :submit, "Enviar pregunta" %>
+			</div>
+		<% end %>
+	
+</div>
+
+<!-- , hint: "Máximo 140 caracteres" -->

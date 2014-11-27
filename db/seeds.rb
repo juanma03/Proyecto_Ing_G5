@@ -28,15 +28,15 @@ Publicacion.create(user_id: 2 ,categoria:'Comestibles',imagen:'https://dl.dropbo
 puts 'Creo las Publicaciones'
 
 
-Oferta.create(user_id: 5, publicacion_id: 2 ,necesidad: 'Siempre me gustaron los animales porque vivo solo y son buena compania. Una llama es justo lo que necesito.' )
-Oferta.create(user_id: 4, publicacion_id: 3 ,necesidad: 'Siempre quise ser vampiro. Con este espejo no me convertiria en vampiro pero me ayudaria a sentirme uno.' )
-Oferta.create(user_id: 6, publicacion_id: 4 ,necesidad: 'Odio a superman y si algun dia lo llego a cruzar este producto me vendria al pelo.' )
-Oferta.create(user_id: 7, publicacion_id: 1 ,necesidad: 'Soy carpintero y la necesito para cuando manejo la sierra.' )
-Oferta.create(user_id: 4, publicacion_id: 1 ,necesidad: 'Soy carnicero y lamentablemente perdi un dedo trabajando. Me gustaria comprar el producto para que no me vuelva a ocurrir' )
+Ofertum.create(user_id: 5, publicacion_id: 2 ,necesidad: 'Siempre me gustaron los animales porque vivo solo y son buena compania. Una llama es justo lo que necesito.' )
+Ofertum.create(user_id: 4, publicacion_id: 3 ,necesidad: 'Siempre quise ser vampiro. Con este espejo no me convertiria en vampiro pero me ayudaria a sentirme uno.' )
+Ofertum.create(user_id: 6, publicacion_id: 4 ,necesidad: 'Odio a superman y si algun dia lo llego a cruzar este producto me vendria al pelo.' )
+Ofertum.create(user_id: 7, publicacion_id: 1 ,necesidad: 'Soy carpintero y la necesito para cuando manejo la sierra.' )
+Ofertum.create(user_id: 4, publicacion_id: 1 ,necesidad: 'Soy carnicero y lamentablemente perdi un dedo trabajando. Me gustaria comprar el producto para que no me vuelva a ocurrir' )
 puts 'Creo las Necesidades'
 
-Consulta.create(user_id: 4, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )
-Consulta.create(user_id: 3, publicacion_id: 2, pregunta: 'Consulta', respuesta: 'Respuesta' )
-Consulta.create(user_id: 4, publicacion_id: 3, pregunta: 'Consulta', respuesta: 'Respuesta' )
-Consulta.create(user_id: 3, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consultum.create(user_id: 4, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consultum.create(user_id: 3, publicacion_id: 2, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consultum.create(user_id: 4, publicacion_id: 3, pregunta: 'Consulta', respuesta: 'Respuesta' )
+Consultum.create(user_id: 3, publicacion_id: 1, pregunta: 'Consulta', respuesta: 'Respuesta' )
 puts 'Creo las Consultas'

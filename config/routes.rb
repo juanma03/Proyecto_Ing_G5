@@ -2,15 +2,17 @@ Rails.application.routes.draw do
   devise_for :users
   get '/mis_publicacions' => 'publicacions#mis_publicacions'
 
-  root 'publicacions#index'
+ root 'publicacions#index'
  
-  get '/orden=:string' => 'publicacions#filtro' , as: :filtro
-  get '/publicacions' => 'publicacions#index' , as: :inicio
-  get '/categorias=:string' => 'publicacions#categorias', as: :categoria
+ get '/orden=:string' => 'publicacions#filtro' , as: :filtro
+ get '/publicacions' => 'publicacions#index' , as: :inicio
+ get '/categorias=:string' => 'publicacions#categorias', as: :categoria
  
   resources :publicacions do
-    resources :ofertas
+    resources :consulta, :only => [:create]
+    resources :oferta, :only => [:create]
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
