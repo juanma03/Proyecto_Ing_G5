@@ -1,0 +1,23 @@
+<body class="fondo">
+
+  <div class="container-fluid">
+    <!-- Categorias/Lista/Nada -->
+    <div class="row cat_list_bann">
+        <div class="col-md-2">
+          <%= render 'menu_categorias' %>
+        </div>
+
+        <div class="col-md-8 lista_index">
+          <div class="no_producto">
+            <h3 style="text-align: center">No se encontraron resultados para su busqueda.</h3>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+            <% if user_signed_in? %>
+             <%= render "menu_usuario"%>
+            <% end %>
+        </div>
+    </div>
+   </div>
+</body>

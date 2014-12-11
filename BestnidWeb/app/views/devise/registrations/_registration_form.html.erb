@@ -1,0 +1,25 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+  wrapper: :vertical_form,
+  html: { class: 'form-vertical' }) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+  <%= f.input :name, required: true, autofocus: true, label: '', placeholder: 'Nombre' %>
+  <%= f.input :last_name, required: true, label: '', placeholder: 'Apellido'%>
+  <%= f.input :email, required: true, label: '', placeholder: 'Email'%>
+  <%= f.input :password, required: true, hint: ("#{@minimum_password_length} caracteres como mínimo" if @validatable), label: '',placeholder: 'Contraseña' %>
+  <%= f.input :password_confirmation, required: true, label: '', placeholder: 'Repetir contraseña' %>
+  <%= f.input :city, required: true, label: '', placeholder: 'Localidad'%>
+  <%= f.input :address, required: true, label: '', placeholder: 'Dirección'%>
+  <%= f.input :phone, required: true, label: '', placeholder: 'Teléfono'%>
+  <%= f.input :adult, label: 'Confirmo mayoría de edad'%>
+  <%= f.input :credit_card_expiration_date, start_year: Date.today.year, end_year: Date.today.year + 10, :discard_day => true, required: false, label: 'Fecha de vencimiento de la tarjeta'%>
+  <%= f.input :credit_card_number, required: false, label: false, placeholder: 'Número de tarjeta de crédito'%>
+  <%= f.input :credit_card_owner, required: false, label: false, placeholder: 'Titular de tarjeta de crédito'%>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit, "Registrate" %>
+  <%= render "devise/shared/links" %>
+</div>
+<% end %>
