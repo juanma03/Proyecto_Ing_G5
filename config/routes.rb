@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- devise_for :users
+ devise_for :users, :controllers => { :registrations => 'registrations' }
+ 
  get '/mis_publicacions' => 'publications#mis_publicacions'
  get '/statistics/por_post'
  post '/statistics/por_post'
