@@ -1,0 +1,33 @@
+es:
+  simple_form:
+    "si": 'Si'
+    "no": 'No'
+    required:
+      text: 'requerido'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Por favor revisa los problemas encontrados abajo:"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    hints:
+      user_basic: &hints
+        email: correo electrónico
+        password: contraseña
+        file: Example block-level help text here.
+        active: Activo
+        sex: Lorem ipsum dolor sit amet
+      user_horizontal: *hints
+    placeholders:
+      user:
+        username: 'Tu nombre de usuario'
+        password: '********'

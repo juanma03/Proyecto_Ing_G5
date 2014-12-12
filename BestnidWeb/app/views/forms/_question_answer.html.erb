@@ -1,0 +1,12 @@
+<% if !consult.answer.blank? %>
+	<div class="col-xs-10 col-md-11 col-md-offset-1">
+		<div class="list-group-item respuesta">
+			<div style="word-wrap: break-word">
+        <%= consult.answer %>
+      </div>
+			<div class="mic-info-respuesta">
+				<%= consult.answer_date.strftime("%d %b %y") %>
+			</div>
+		</div>
+	</div>
+<%end%>
