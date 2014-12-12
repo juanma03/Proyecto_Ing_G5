@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141210193129) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string  "security_code"
+    t.string   "security_code"
   end
 
   create_table "publications", force: true do |t|
