@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav navbar-right">
         
         <% if user_signed_in? %>
-        <li><%= link_to 'Mi Perfil',root_path %></li>
+        <li><%= link_to current_user.name.humanize,root_path %></li>
         
         <li><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></li>
         <% else %>
