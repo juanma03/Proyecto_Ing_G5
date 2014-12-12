@@ -40,8 +40,8 @@ Offer.create(user_id: 4, publication_id: 1 , amount: 50, necessity: 'Soy carnice
 Offer.create(user_id: 2, publication_id: 5 , amount: 6, necessity: 'Me gustaria tener ese aceite para hacerle una ensalada a los chicos carenciados de Villa La Cava' )
 puts 'Creo las Offers'
 
-Question.create(user_id: 4, publication_id: 1, question: 'Consulta', answer: '' )
-Question.create(user_id: 3, publication_id: 2, question: 'Consulta', answer: '' )
-Question.create(user_id: 4, publication_id: 3, question: 'Consulta', answer: '' )
-Question.create(user_id: 3, publication_id: 1, question: 'Consulta', answer: '' )
+Question.create(user_id: 4, publication_id: 1, question: 'Consulta', answer: '', security_code: '1234' )
+Question.create(user_id: 3, publication_id: 2, question: 'Consulta', answer: '', security_code: '1234' )
+Question.create(user_id: 4, publication_id: 3, question: 'Consulta', answer: '', security_code: '1234' )
+Question.create(user_id: 3, publication_id: 1, question: 'Consulta', answer: '', security_code: '1234' )
 puts 'Creo las Consultas'
