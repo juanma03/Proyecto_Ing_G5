@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+config.assets.precompile += %w( application.js )
 
 module SimpleFormBootstrap
   class Application < Rails::Application
