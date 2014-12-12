@@ -6250,6 +6250,8 @@ a.badge:hover, a.badge:focus {
   display: block;
   padding: 4px;
   margin-bottom: 20px;
+  height: 300px;
+  width: 150px;
   line-height: 1.428571429;
   background-color: white;
   border: 1px solid #dddddd;
