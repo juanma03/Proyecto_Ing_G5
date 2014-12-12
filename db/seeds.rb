@@ -32,16 +32,16 @@ Publication.create(user_id: 4 ,category:'Deporte',image:'https://dl.dropboxuserc
 Publication.create(user_id: 4 ,category:'Electronica',image:'https://dl.dropboxusercontent.com/u/97561407/mark1.jpg',name: 'Mark 1', description: 'Computadora de alto rendimiento IBM Mark 1, perfecta para dejarla realizando calculos complejos mientras uno se va de vacaciones.', expiration: Time.now+25.days, finished: false)
 puts 'Creo las Publicaciones'
 
-Offer.create(user_id: 5, publication_id: 2 , amount: 500, necessity: 'Siempre me gustaron los animales porque vivo solo y son buena compania. Una llama es justo lo que necesito.' )
-Offer.create(user_id: 4, publication_id: 3 , amount: 80, necessity: 'Siempre quise ser vampiro. Con este espejo no me convertiria en vampiro pero me ayudaria a sentirme uno.' )
-Offer.create(user_id: 2, publication_id: 4 , amount: 10000, necessity: 'Odio a superman y si algun dia lo llego a cruzar este producto me vendria al pelo.' )
-Offer.create(user_id: 3, publication_id: 1 , amount: 30, necessity: 'Soy carpintero y la necesito para cuando manejo la sierra.' )
-Offer.create(user_id: 4, publication_id: 1 , amount: 50, necessity: 'Soy carnicero y lamentablemente perdi un dedo trabajando. Me gustaria comprar el producto para que no me vuelva a ocurrir' )
-Offer.create(user_id: 2, publication_id: 5 , amount: 6, necessity: 'Me gustaria tener ese aceite para hacerle una ensalada a los chicos carenciados de Villa La Cava' )
+Offer.create(user_id: 5, publication_id: 2 , amount: 500, necessity: 'Siempre me gustaron los animales porque vivo solo y son buena compania. Una llama es justo lo que necesito.', security_code: '123')
+Offer.create(user_id: 4, publication_id: 3 , amount: 80, necessity: 'Siempre quise ser vampiro. Con este espejo no me convertiria en vampiro pero me ayudaria a sentirme uno.', security_code: '123')
+Offer.create(user_id: 2, publication_id: 4 , amount: 10000, necessity: 'Odio a superman y si algun dia lo llego a cruzar este producto me vendria al pelo.', security_code: '123')
+Offer.create(user_id: 3, publication_id: 1 , amount: 30, necessity: 'Soy carpintero y la necesito para cuando manejo la sierra.', security_code: '123')
+Offer.create(user_id: 4, publication_id: 1 , amount: 50, necessity: 'Soy carnicero y lamentablemente perdi un dedo trabajando. Me gustaria comprar el producto para que no me vuelva a ocurrir', security_code: '123')
+Offer.create(user_id: 2, publication_id: 5 , amount: 6, necessity: 'Me gustaria tener ese aceite para hacerle una ensalada a los chicos carenciados de Villa La Cava', security_code: '123')
 puts 'Creo las Offers'
 
-Question.create(user_id: 4, publication_id: 1, question: 'Consulta', answer: '', security_code: '123' )
-Question.create(user_id: 3, publication_id: 2, question: 'Consulta', answer: '', security_code: '123' )
-Question.create(user_id: 4, publication_id: 3, question: 'Consulta', answer: '', security_code: '123' )
-Question.create(user_id: 3, publication_id: 1, question: 'Consulta', answer: '', security_code: '123' )
+Question.create(user_id: 4, publication_id: 1, question: 'Consulta', answer: '')
+Question.create(user_id: 3, publication_id: 2, question: 'Consulta', answer: '')
+Question.create(user_id: 4, publication_id: 3, question: 'Consulta', answer: '')
+Question.create(user_id: 3, publication_id: 1, question: 'Consulta', answer: '')
 puts 'Creo las Consultas'
