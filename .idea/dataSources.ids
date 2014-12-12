@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails BestnidWeb: development" uuid="f00df39d-1ba2-4fb6-8c20-97871e596c62">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source source="LOCAL" name="Rails BestnidWeb: test" uuid="407a9e4e-4ac2-4e54-bc5d-d75cd2f36e79">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-</component>
