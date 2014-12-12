@@ -31,4 +31,4 @@ gem 'sdoc', group: :doc
 gem 'validates_email_format_of'
 gem 'date_validator'
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
