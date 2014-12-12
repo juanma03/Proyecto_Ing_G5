@@ -13,7 +13,7 @@ Rails.application.routes.draw do
  get '/categorias=:string' => 'publications#categorias', as: :categoria
   resources :publications do
     resources :questions, :only => [:create, :update]
-    resources :offers, :only => [:create]
+    resources :offers, :only => [:create, :new]
     get '/:ganador' => 'publications#elegir_ganador', as: :elegir_ganador
   end
 

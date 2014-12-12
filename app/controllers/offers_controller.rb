@@ -1,9 +1,9 @@
 class OffersController < ApplicationController
 	
-  def new
+  	def new
       @prod= Publication.find(params[:publication_id])
 		  @necesidad= @prod.offers.create(oferta_params)
-      redirect_to :back
+      redirect_to @prod
 	end
 
 	private
