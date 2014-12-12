@@ -13,11 +13,8 @@ gem 'bootstrap-sass', '~> 3.3.0'
 
 gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
-gem 'sqlite3', :groups => [:test, :development]
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #SOY UNA BARRA SEPARADORA

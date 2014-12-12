@@ -1,8 +1,8 @@
 class OffersController < ApplicationController
 	
-  def caca
+  def create
       @prod= Publication.find(params[:publication_id])
-		  @necesidad= @prod.offers.build(oferta_params)
+		  @necesidad= @prod.offers.create(oferta_params)
       redirect_to @prod
 	end
 

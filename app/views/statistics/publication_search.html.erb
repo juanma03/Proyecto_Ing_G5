@@ -68,7 +68,7 @@
                               <tr>
                                 <td><%=p.name%></td>
                                 <td><%=p.terminated_date.strftime("%d/%m/%y")%></td>
-                                <% monto=p.offers.where("user_id like ?", p.winner_id).first.amount*0.3 %>
+                                <% monto=p.offers.where("user_id = ?", p.winner_id).first.amount*0.3 %>
                                 <td><%= number_with_precision(monto, :precision => 2)%></td>
                                 <% total=total + monto%>
                               </tr>

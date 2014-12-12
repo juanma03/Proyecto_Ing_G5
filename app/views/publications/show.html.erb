@@ -50,7 +50,7 @@
                 <div class="row">
                   <%= render partial: "forms/question_question", locals: {consult: c} %>
                   <% if user_signed_in? %>
-                      <% if (current_user.id == @prod.user_id) and (c.answer.blank?) and Publication.inactivas.con_id(@prod.id).blank? %>
+                      <% if ((current_user.id == @prod.user_id) and (c.answer.blank?) and (Publication.inactivas.con_id(@prod.id).blank?)) %>
                           <%= render partial: "forms/answer_form", locals: {consult: c} %>
                       <%end%>
                   <%end%>

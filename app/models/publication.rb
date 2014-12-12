@@ -20,7 +20,7 @@ class Publication < ActiveRecord::Base
 
   def self.con_id(id)
     # where(:title, query) -> This would return an exact match of the query
-    where("id like ?", id)
+    where("id = ?", id)
   end
 
   def self.search(query)
