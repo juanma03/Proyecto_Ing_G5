@@ -11,15 +11,29 @@
     <%= render 'layouts/header' %>
     <br>
     <br>
+
     <div id="principal">
     <% flash.each do |key, value| %>
-    <div class="alert alert.-<%= key %> alert-dismissable alert-success">
-      <button type="button" class="close" data-dismiss="alert">x</button>
-      <%=value %>
-    </div>
-    <% end %>
-    <%= yield %>
-    </div>
-  </body>
+      <% if key == "alert" %>
 
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert">x</button>
+          <%=value %>
+        </div>
+
+      <% else %>
+        
+        <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert">x</button>
+          <%=value %>
+        </div>
+
+      <% end %>
+    <% end %>
+
+    <%= yield %>
+    
+    </div>
+    
+  </body>
 </html>
