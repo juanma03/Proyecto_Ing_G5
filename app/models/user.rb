@@ -26,6 +26,6 @@ class User < ActiveRecord::Base
   #Tarjeta
   validates_format_of :credit_card_number, :with => /\A[0-9]{16}\Z/, :unless => 'credit_card_number.blank?'
   validates_uniqueness_of :credit_card_number, :unless => 'credit_card_owner.blank?'
-  validates_format_of :credit_card_owner, :with => /\A[a-zA-Z]{2,25}\Z/, :unless => 'credit_card_owner.blank?'
+  validates_format_of :credit_card_owner, :with => /\A[a-zA-Z' ']{2,25}\Z/, :unless => 'credit_card_owner.blank?'
 
 end
