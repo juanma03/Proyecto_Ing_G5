@@ -1,5 +1,5 @@
-class OthersController < ApplicationController
-  def delete_user
+class AccountController < ApplicationController
+  def delete
     if request.post?
       user= User.find_by_email(current_user.email)
       if (user.valid_password?(params[:password]))

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
- get '/others/delete_user'
- post '/others/delete_user'
+ get '/accounts/delete'
+ post '/accounts/delete'
  devise_for :users
  get '/mis_publicacions' => 'publications#mis_publicacions'
  get '/statistics/por_post'

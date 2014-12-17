@@ -1,4 +1,4 @@
-<%= form_tag({:controller => "others", :action => "delete_user"}, :method => "post") do %>
+<%= form_tag({:controller => "account", :action => "delete"}, :method => "post") do %>
   <%= label_tag "Contraseña" %>
   <%= password_field_tag :password, :autocomplete => :off %>
   <br>
