@@ -1,4 +1,4 @@
-class AccountController < ApplicationController
+class AccountsController < ApplicationController
   def delete
     if request.post?
       user= User.find_by_email(current_user.email)
