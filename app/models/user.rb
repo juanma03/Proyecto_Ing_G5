@@ -28,4 +28,14 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :credit_card_number, :unless => 'credit_card_owner.blank?'
   validates_format_of :credit_card_owner, :with => /\A[a-zA-Z]{2,25}\Z/, :unless => 'credit_card_owner.blank?'
 
+  def eliminar(current_password)
+  if valid_password?(current_password)
+    self.destroy
+  else
+    self.valid?
+    self.errors.add(:current_password, current_password.blank? ? :blank : :invalid)
+    false
+  end
+  end
+
 end

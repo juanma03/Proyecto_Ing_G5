@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
- get '/others/delete_user'
- post '/others/delete_user'
- devise_for :users
+ devise_for :users, :controllers => { :registrations => 'registrations' }
+ 
  get '/mis_publicacions' => 'publications#mis_publicacions'
  get '/statistics/por_post'
  post '/statistics/por_post'
  get '/statistics/publication_search'
  post '/statistics/publication_search'
- 
+
  root 'publications#index'
  
  get '/orden=:string' => 'publications#filtro' , as: :filtro

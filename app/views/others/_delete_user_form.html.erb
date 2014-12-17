@@ -1,7 +1,0 @@
-<%= form_tag({:controller => "others", :action => "delete_user"}, :method => "post") do %>
-  <%= label_tag "Contraseña" %>
-  <%= password_field_tag :password %>
-  <br>
-  <br>
-  <%= submit_tag "Eliminar cuenta", data: { confirm: "¿Estás Seguro?" } %>
-<% end %>
